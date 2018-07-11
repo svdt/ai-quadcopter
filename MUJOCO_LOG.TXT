@@ -1,0 +1,6 @@
+Fri Jun  8 12:37:11 2018
+ERROR: Could not open activation key file /Users/vdt/.mujoco/mjkey.txt
+
+Fri Jun  8 17:24:35 2018
+ERROR: Could not open activation key file /Users/vdt/.mujoco/mjkey.txt
+

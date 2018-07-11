@@ -1,0 +1,29 @@
+<mujoco model="leaf">
+	<compiler inertiafromgeom="true" coordinate="local"/>
+	<option	timestep="0.001" gravity="0 0 -9.81" density="1" viscosity="1e-5" />
+
+
+	<worldbody>
+		<geom name="floor" pos="0 0 0" size="2 2 .2" type="plane"  conaffinity="1" rgba="0.8 0.2 0.2 1" condim="3"/>
+		<body name="leaf" pos="0 0 2" >
+			<geom name="g0" type="box" pos="0 0 0" quat = "1 -0.2 0.05 0" size="0.2 0.06 0.0002"  rgba="0.3 0.3 0.8 1" mass = ".001"/>
+			<joint name="root" type="free" damping="0" armature="0"/>
+			<body name="l1" pos="0.4 0 0" >
+				<geom name="g1" type="box" pos="0 0 0" size="0.2 0.06 0.0002"  quat = "1 0.2 -.05 0" rgba="0.3 0.8 0.3 1" mass = ".001"/>
+			</body>
+		</body>
+
+		<body name="leaf2" pos="0 1 2" >
+			<geom name="g2" type="box" pos="0.2 0 0" quat = "1 -0.2 -0.05 0" size="0.2 0.03 0.0002"  rgba="0.3 0.3 0.8 1" mass = ".001"/>
+			<joint name="root1" type="free" damping="0" armature="0"/>
+			<body name="l2" pos="-.14 .14 0" >
+				<geom name="g3" type="box" pos="0 0 0" size="0.2 0.03 0.0002"  quat = "1 0.2 -.05 -.5" rgba="0.3 0.8 0.3 1" mass = ".001"/>
+			</body>
+			<body name="l3" pos="-.14 -.14 0" >
+				<geom name="g4" type="box" pos="0 0 0" size="0.2 0.03 0.0002"  quat = "1 0.2 .05 .5" rgba="0.8 0.8 0.3 1" mass = ".001"/>
+			</body>
+		</body>
+
+	</worldbody>
+
+</mujoco>
